@@ -5,33 +5,67 @@ const caixaResultado = document.querySelector('.caixa-resultado');
 
 const perguntas = [
     {
-        enunciado: "voce gosta da ideia da inteligencia artificial",
-        alternativas:["sim","nao"]
+        enunciado: "Você gosta da ideia de Inteligência Artificial?",
+        alternativas: [
+            {
+                texto: "Sim",
+                afirmativa: "Afirmativa da alternativa 1"
+            },
+            {
+                texto: "Não",
+                afirmativa: "Afirmativa da alternativa 2"
+            }
+        ]
     },
     {
-        enunciado: "voce acha que ela poderia ser um problema futuramente?",
-        alternativas:["sim","nao"]
+        enunciado: "Pergunta 2",
+        alternativas: [
+            {
+                texto: "Sim",
+                afirmativa: "Afirmativa da alternativa 1"
+            },
+            {
+                texto: "Não",
+                afirmativa: "Afirmativa da alternativa 2"
+            }
+        ]
     },
     {
         enunciado: "Pergunta 3",
-        alternativas:["Alternativa 1","Alternativa 2"]
+        alternativas: [
+            {
+                texto: "Sim",
+                afirmativa: "Afirmativa da alternativa 1"
+            },
+            {
+                texto: "Não",
+                afirmativa: "Afirmativa da alternativa 2"
+            }
+        ]
     }
 ]
 
-let atual = 0;
+let posicao = 0;
 let perguntaAtual;
+let respostas = "";
 
-function mostraPergunta(){
-    perguntaAtual = perguntas[atual];
+function mostraPergunta() {
+    perguntaAtual = perguntas[posicao];
     caixaPergunta.textContent = perguntaAtual.enunciado;
     mostraAlternativas();
 }
-Function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativa){ 
-        const botaoAlternativa = document.createElement("button");
-        botaoAlternativa.textContent =alternativas;
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
+        const botaoAlternativas = document.createElement("button");
+        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.addEventListener("click",function() => respostaSelecionada (alternativa));
         caixaAlternativa.appendChild(botaoAlternativas);
     }
 }
-
-
+respostaSelecionada(opcaoselecionada){
+    const afirmacoes = opcaoselecionada.afirmativa;
+    respostas =afirmacoes;
+    posicao++
+    mostraPergunta();
+}
+mostraPergunta();
