@@ -9,28 +9,28 @@ const perguntas = [     //serve para abrir lista de perguntas
         enunciado: "voce acha que a inteligencia artificial é uma boa ideia?",
         alternativas: [
             {texto: "Sim",
-            afirmação:"A IA é uma boa ideia"}, 
+            afirmação:"A IA é uma boa ideia."}, 
 
             {texto: "Não",
-            afirmação:"A IA não é uma boa ideia"}]
+            afirmação:"A IA não é uma boa ideia."}]
     },
     { 
         enunciado: "a IA pode ser perigosa?",
         alternativas: [
             {texto: "Sim",
-            afirmação:"A IA tem um potencial perigo"}, 
+            afirmação:"A IA tem um potencial perigo."}, 
                 
             {texto: "Não",
-            afirmação:"A IA não apresenta perigo"}]
+            afirmação:"A IA não apresenta perigo."}]
     },
     { 
         enunciado: "voce usa IA?",
         alternativas: [
             {texto: "Sim",
-            afirmação:"Sim, a IA é útil no meu dia a dia"}, 
+            afirmação:"Sim, a IA é útil no meu dia a dia."}, 
                 
             {texto: "Não",
-            afirmação:"Não, a IA não é relevante para mim"}]
+            afirmação:"Não, a IA não é relevante para mim."}]
     },
 ]
 
